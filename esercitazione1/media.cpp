@@ -12,15 +12,15 @@ int main(int argc, const char *argv[])
 		std::ifstream ifs(argv[1]);
 		if (ifs.is_open()) {
 			for (int r=1; r<= 3; r++){
-				std::string città = "a";
+				std::string citta = "a";
 				float t_1 = 0;
 				float t_2 = 0;
 				float t_3 = 0;
 				float t_4 = 0;
-				ifs >> città >> t_1 >> t_2 >> t_3 >> t_4;
+				ifs >> citta >> t_1 >> t_2 >> t_3 >> t_4;
 				float media = 0;
 				media = (t_1 + t_2 + t_3 + t_4)/4;
-				std::cout << città << "  "<< media << "\n";
+				std::cout << citta << "  "<< media << "\n";
 			}
 		}
 		else {
