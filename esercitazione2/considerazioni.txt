@@ -1,0 +1,16 @@
+PARTE 1
+
+ std::cout << &x << "\n";	stampa 0x7fffc680f3b0
+ std::cout << &y << "\n";	stampa 0x7fffc680f3ac
+ std::cout << &ad[0] << "\n";	stampa 0x7fffc680f3e0
+ std::cout << &af[0] << "\n";	stampa 0x7fffc680f3c0
+ std::cout << &ai[0] << "\n";	stampa 0x7fffc680f3b4
+
+PARTE 2
+
+ std::cout << &x << "\n";	stampa 0x7ffd0b4b68b0
+ std::cout << &y << "\n";	stampa 0x7ffd0b4b68ac
+ std::cout << x << "\n";	stampa 0
+
+CONSIDERAZIONI
+(&y)[1] = 0 scrive uno zero all'indirizzo di base della y + 1*sizeof(y), dato che sizeof(y) = 4, il comando scrive uno zero all'indirizzo 0x7ffd0b4b68ac, indirizzo a cui era memorizzata la x, quindi stampando la x si stampa il valore che si trova a questo indirizzo, ossia 0.
