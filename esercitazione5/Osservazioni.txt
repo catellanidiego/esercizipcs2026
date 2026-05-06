@@ -1,0 +1,3 @@
+I tempi degli ordinamenti in modalità release sono uniformemente più veloci dei tempi degli ordinamenti in modalità Debug di un fattore circa uguale a 5.
+Inoltre il measure_sorts_small restituisce una soglia in cui gli algoritmi quadratici sono più veloci degli algoritmi nlog(n) di circa 99 o 100 in modalità Release e circa 65 in modalità Debug, questo potrebbe essere spiegato da una precisione troppo bassa del programma timecounter per la modalità Release, che introduce troppe poche cifre significative per un confronto affidabile.
+Inoltre si rileva che in ogni caso il sorting standard è più veloce di tutti gli altri algoritmi, sia in modalità Release che Debug.
