@@ -54,7 +54,7 @@ class undirected_graph {
 		}
 		
 		undirected_edge<T> edge_at(int i) const {
-			return E[i];
+			return E.at(i);
 		}
 		
 		undirected_graph operator-(const undirected_graph& G_2) const {
