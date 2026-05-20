@@ -19,7 +19,7 @@ class lifo {
 			return elem; 
 		}
 
-		bool empty() {
+		const bool empty() {
 			return s.empty();
 		}
 

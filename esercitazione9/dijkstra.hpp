@@ -8,7 +8,7 @@
 #include "grafi.hpp"
 
 template <typename T>
-std::map<T, double> Dijkstra (undirected_graph<T>& G, const T& s, const std::map<undirected_edge<T>, double>& W) {
+std::map<T, double> Dijkstra (const undirected_graph<T>& G, const T& s, const std::map<undirected_edge<T>, double>& W) {
 	std::set<T> V = G.all_nodes();
 	std::map<T, std::optional<T>> pred;
 	std::map<T, double> dist;

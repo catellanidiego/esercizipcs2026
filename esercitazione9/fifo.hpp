@@ -19,7 +19,7 @@ class fifo {
 			return elem;
 		};
 
-		bool empty() { 
+		const bool empty() { 
 			return q.empty();
 		}
 };
