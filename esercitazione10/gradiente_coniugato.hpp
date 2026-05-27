@@ -12,10 +12,11 @@ void gradiente_coniugato (
 	Eigen::Matrix<Scalarb, Eigen::Dynamic, 1> r = b - A * x_0;
 	Eigen::Matrix<Scalarb, Eigen::Dynamic, 1> p = r;
 	while (r.norm() > tol) {
-		auto alpha = p.dot(r)/(p.dot(A*p)); //reperita documentazione online per fare i prodotti scalari
+		Eigen::Matrix<Scalarb, Eigen::Dynamic, 1> Ap = A * p;
+		auto alpha = p.dot(r)/(p.dot(Ap)); //reperita documentazione online per fare i prodotti scalari
 		x_0 = x_0 + alpha * p;
 		r = b - A * x_0;
-		auto beta = p.dot(A*r)/(p.dot(A*p));
+		auto beta = Ap.dot(r)/(p.dot(Ap));
 		p = r - beta * p;
 	}
 }

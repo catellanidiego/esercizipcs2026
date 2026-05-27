@@ -14,5 +14,5 @@ add_executable(test_gc_exec test_gc.cpp)
 
 target_link_libraries(test_gc_exec PUBLIC ${libraries_list})
 
-add_test (NAME test_gradiente_coniugato COMMAND test_gc_exec)
 enable_testing()
+add_test (NAME test_gradiente_coniugato COMMAND test_gc_exec)
